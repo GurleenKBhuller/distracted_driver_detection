@@ -56,3 +56,9 @@ Optimizer: RMSProp
 Regularization: Dropout layers (25–50%)
 
 Callbacks: ModelCheckpoint, EarlyStopping to prevent overfitting
+
+**Final Evaluation
+**
+Final Test Accuracy: 98.95%
+
+This high accuracy reflects the model’s strong performance in classifying distracted driving behaviors across 10 classes.
