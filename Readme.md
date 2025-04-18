@@ -1,14 +1,14 @@
-Distracted Driver Detection – CNN-based Image Classification
-
-Overview
+**Distracted Driver Detection – CNN-based Image Classification
+**
+**Overview**
 This project focuses on detecting driver distractions using a Convolutional Neural Network (CNN) model trained on image data. The goal is to classify driver behavior into 10 distinct categories (e.g., texting, drinking, talking to passengers) using the State Farm Distracted Driver Detection dataset (https://www.kaggle.com/c/state-farm-distracted-driver-detection/data).
 
-Dataset Summary
-The dataset contains over 22,000 labeled images spread across 10 classes (c0 to c9), representing different distracted driving behaviors. Each image is associated with a subject (i.e., driver ID), enabling both classification and per-user analytics.
+**Dataset Summary
+**The dataset contains over 22,000 labeled images spread across 10 classes (c0 to c9), representing different distracted driving behaviors. Each image is associated with a subject (i.e., driver ID), enabling both classification and per-user analytics.
 
 
-Class	Description
-c0	Safe driving
+**Class	Description
+**c0	Safe driving
 c1	Texting - right hand
 c2	Talking on the phone - right
 c3	Texting - left hand
@@ -19,8 +19,8 @@ c7	Reaching behind
 c8	Hair and makeup
 c9	Talking to passenger
 
-Project Workflow
-1. Data Loading & Preprocessing
+**Project Workflow
+**1. Data Loading & Preprocessing
 Images are resized to 225x225 and loaded from train/c{0-9}/ folders
 
 Labels are mapped numerically (c0 = 0, c1 = 1, ..., c9 = 9)
@@ -47,8 +47,8 @@ Flatten → Dense (256 units) → Dropout
 
 Output layer with softmax activation (10 classes)
 
-🔧 Training Details:
-
+**Training Details:
+**
 Loss Function: Categorical Crossentropy
 
 Optimizer: RMSProp
@@ -56,3 +56,9 @@ Optimizer: RMSProp
 Regularization: Dropout layers (25–50%)
 
 Callbacks: ModelCheckpoint, EarlyStopping to prevent overfitting
+
+**Final Evaluation
+**
+Final Test Accuracy: 98.95%
+
+This high accuracy reflects the model’s strong performance in classifying distracted driving behaviors across 10 classes.
